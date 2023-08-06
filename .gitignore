@@ -35,4 +35,4 @@
 *.png
 *.jpg
 
-esp32.esp32.*/
+#esp32.esp32.*/
