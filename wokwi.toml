@@ -1,10 +1,7 @@
 [wokwi]
 version = 1
 gdbServerPort = 3333
-elf = "build/esp32.esp32.esp32da/esp32can.ino.elf"
-firmware = "build/esp32.esp32.esp32da/esp32can.ino.elf"
+elf = "usbkwa/build/esp32.esp32.esp32s3usbotg/usbkwa.ino.elf"
+firmware = "usbkwa/build/esp32.esp32.esp32s3usbotg/usbkwa.ino.elf"
 
-#esp32是没有can总线的，需要自己拓展，你可以使用uart或者spi转can总线，例如 CSM100，MCP2510等转换芯片，再加一些隔离保护电路，是可以用在工业场合的，望采纳
-#So I tryed pins 12 and 13 without luck. Then I used 4 and 5 again with the ESP32CAN. It works now. It seems it was not working because the baudrate is always half as what it is set to.
-#I looked at the CAN library. It says it does have support for the EPS's SJA1000 CAN controller.
-#The ESP32 contains 1 TWAI controller(s) that can be configured to communicate on a TWAI bus via an external transceiver
+#https://kgithub.com/wokwi/wokwi-boards/blob/main/boards/esp32-s3-devkitc-1/board.json

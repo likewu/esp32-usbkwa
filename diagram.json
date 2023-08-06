@@ -4,7 +4,7 @@
   "editor": "wokwi",
   "parts": [
     {
-      "type": "wokwi-esp32-devkit-v1",
+      "type": "board-esp32-s3-devkitc-1",
       "id": "esp",
       "top": 0,
       "left": 0,
@@ -13,8 +13,7 @@
   ],
   "connections": [
     [ "esp:TX0", "$serialMonitor:RX", "", [] ],
-    [ "esp:RX0", "$serialMonitor:TX", "", [] ],
-    [ "esp:D5", "esp:D4", "blue", [ ] ]
+    [ "esp:RX0", "$serialMonitor:TX", "", [] ]
   ],
   "dependencies": {}
 }
