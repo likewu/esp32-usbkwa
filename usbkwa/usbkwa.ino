@@ -8,31 +8,6 @@
  *
  */
 
-/*
- * MIT License
- *
- * Copyright (c) 2021 touchgadgetdev@gmail.com
- *
- * Permission is hereby granted, free of charge, to any person obtaining a copy
- * of this software and associated documentation files (the "Software"), to deal
- * in the Software without restriction, including without limitation the rights
- * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
- * copies of the Software, and to permit persons to whom the Software is
- * furnished to do so, subject to the following conditions:
- *
- * The above copyright notice and this permission notice shall be included in all
- * copies or substantial portions of the Software.
- *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
- * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
- * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
- * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
- * SOFTWARE.
- */
-
-
 #include <USB.h>
 #include <USBHIDKeyboard.h>
 #include <WiFi.h>
@@ -42,7 +17,7 @@
 #include <ESPmDNS.h>
 #include <ArduinoJson.h>  // Install from IDE Library manager
 
-#define DEBUG_ON  0
+#define DEBUG_ON  1
 #if DEBUG_ON
 #define DBG_begin(...)    Serial.begin(__VA_ARGS__)
 #define DBG_print(...)    Serial.print(__VA_ARGS__)
@@ -170,6 +145,7 @@ void handleNotFound()
 
 void setup()
 {
+  //DBG_println(F("aaaaaaaaaaaaaa"));
   WiFi.mode(WIFI_STA); // explicitly set mode, esp defaults to STA+AP
   DBG_begin(115200);
 
